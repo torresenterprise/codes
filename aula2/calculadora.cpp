@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -29,12 +31,18 @@ int calculadora(int op, int a, int b) {
 }
 
 int main() {
+/*
 	cout << "Essa é uma calculadora básica. Digite:" << endl << endl;
 	cout << "0 - soma:" << endl;
 	cout << "1 - subtração:" << endl;
 	cout << "2 - multiplicação:" << endl;
+*/
 	int op, a, b;
-	cin >> op >> a >> b;
-	calculadora(op, a, b);
+	
+	while(cin >> op >> a >> b) {
+		int resultado = calculadora(op, a, b);
+		cout << resultado << endl;
+	}
+
 	return 0;
 }
